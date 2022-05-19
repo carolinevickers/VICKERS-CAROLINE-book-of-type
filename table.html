@@ -4,15 +4,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
-    <link rel="stylesheet" type="text/JavaScript" href="./assets/javascripts/3-5-1-jquery.min.js" />
-    <link rel="stylesheet" type="text/JavaScript" href="./assets/javascripts/tablesorter.min.js"/>
+    
   
     <title>INDEX/ TABLE</title>
     <style>
-      body{
-        background-color: rgb(255, 244, 222);
-        
-      }
+      
       table#your-table-items {
         border-collapse: collapse;
         text-align: left;
@@ -33,26 +29,22 @@
         width: 15%;
       }
   
-      table#your-items thead {
+      table#your-table-items thead {
         font-size: 0.7em;
         color: rgb(86, 107, 46);
         
       }
-
-      table#your-items th {
-        color: rgb(86, 107, 46);
-      }
   
-      table#your-items thead th {
+      table#your-table-items thead th {
         color: rgb(86, 107, 46);
         background-color: rgb(255, 244, 222);
         font-size: 18px; 
         padding: 8px;
       }
   
-      table#your-items thead th:hover {
-        color: rgb(124, 152, 60);
-        background-color: rgb(255, 244, 222);
+      table#your-table-items thead th:hover {
+        color: rgb(255, 244, 222);
+        background-color: rgb(124, 152, 60);
         cursor: pointer;
       }
   
@@ -132,12 +124,15 @@
   <h1 style="padding: 10px 10px 0px 30px;">THE HISTORY OF BODONI TYPEFACE</h1>
   
   <body style="background-color: rgb(255, 244, 222); align-content: center;">
-    <table id="your-table-items"; style="font-family: Bidoni; background-color: rgb(255, 244, 222);">
+    <table id="your-table-items" style="font-family: Bidoni;">
+      <thead>
         <tr>
-          <th onclick=sortTable (0); style="border-bottom: 1px solid rgb(86, 107, 46); padding-left: 50px; padding-top: 0px; padding-bottom: 10px; padding-right: 50px; column-width: auto; font-size: 18px; text-align: left ">CHARACTERISTIC</th>
-          <th onclick=sortTable (1); style=" border-bottom: 1px solid rgb(86, 107, 46); padding-left: 50px; padding-top: 0px; padding-bottom: 10px; padding-right: 50px; column-width: auto; font-size: 18px; text-align: left">DEFINITION</th>
-          <th onclick=sortTable (2); style=" border-bottom: 1px solid rgb(86, 107, 46); padding-left: 50px; padding-top: 0px; padding-bottom: 10px; padding-right: 50px; column-width: auto; font-size: 18px;line-height: 25px; text-align: left">PAGE GUIDE</th>
+          <th style="border-bottom: 1px solid rgb(86, 107, 46); padding-left: 50px; padding-top: 0px; padding-bottom: 10px; padding-right: 50px; column-width: auto; font-size: 18px; text-align: left ">CHARACTERISTIC</th>
+          <th style=" border-bottom: 1px solid rgb(86, 107, 46); padding-left: 50px; padding-top: 0px; padding-bottom: 10px; padding-right: 50px; column-width: auto; font-size: 18px; text-align: left">DEFINITION</th>
+          <th style=" border-bottom: 1px solid rgb(86, 107, 46); padding-left: 50px; padding-top: 0px; padding-bottom: 10px; padding-right: 50px; column-width: auto; font-size: 18px;line-height: 25px; text-align: left">PAGE GUIDE</th>
         </tr>
+      </thead>
+      <tbody>
         <tr>
           <td style=" border-bottom: 1px solid rgb(86, 107, 46); padding-left: 50px; padding-top: 30px; padding-bottom: 10px; padding-right: 50px; column-width: auto; font-size: 16px;">Spur</td>
           <td style=" border-bottom: 1px solid rgb(86, 107, 46); padding-left: 50px; padding-top: 30px; padding-bottom: 10px; padding-right: 50px; column-width: auto; font-size: 16px;">Small extensions of letter strokes which dont quality as serifs</td>
@@ -203,66 +198,22 @@
           <td style=" border-bottom: 1px solid rgb(86, 107, 46); padding-left: 50px; padding-top: 30px; padding-bottom: 10px; padding-right: 50px; column-width: auto; font-size: 16px;">Used to describe posture, the angle that bisects the upper and lower stroke is the aixs</td>
           <td style=" border-bottom: 1px solid rgb(86, 107, 46); padding-left: 50px; padding-top: 30px; padding-bottom: 10px; padding-right: 50px; column-width: auto; font-size: 16px;">PG. 5</td>
         </tr>
+      </tbody>
+       
        
     </table>
     <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/JavaScript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
-  
+    <script type="text/JavaScript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
+    <!-- BEG JavaScript -->
     <script>
-      function sortTable(n) {
-        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-        table = document.getElementById("your-table-items");
-        switching = true;
-        //Set the sorting direction to ascending:
-        dir = "asc"; 
-        /*Make a loop that will continue until
-        no switching has been done:*/
-        while (switching) {
-          //start by saying: no switching is done:
-          switching = false;
-          rows = table.rows;
-          /*Loop through all table rows (except the
-          first, which contains table headers):*/
-          for (i = 1; i < (rows.length - 1); i++) {
-          //start by saying there should be no switching:
-            shouldSwitch = false;
-            /*Get the two elements you want to compare,
-            one from current row and one from the next:*/
-            x = rows[i].getElementsByTagName("td")[n];
-            y = rows[i + 1].getElementsByTagName("td")[n];
-            /*check if the two rows should switch place,
-            based on the direction, asc or desc:*/
-            if (dir == "asc") {
-              if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                //if so, mark as a switch and break the loop:
-                shouldSwitch= true;
-                break;
-              }
-        } else if (dir == "desc") {
-          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-            //if so, mark as a switch and break the loop:
-            shouldSwitch = true;
-            break;
-          }
-        }
-        }
-        if (shouldSwitch) {
-          /*If a switch has been marked, make the switch
-          and mark that a switch has been done:*/
-          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-          switching = true;
-          //Each time a switch is done, increase this count by 1:
-          switchcount ++;      
-        } else {
-          /*If no switching has been done AND the direction is "asc",
-          set the direction to "desc" and run the while loop again.*/
-          if (switchcount == 0 && dir == "asc") {
-            dir = "desc";
-            switching = true;
-          }
-        }
-      }
-    }
+      $(document).ready(function () {
+        $("table#your-table-items").tablesorter({
+          sortList: [[2, 0]],
+          CssAsc: "tablesorter-headerAsc",
+          CssDesc: "tablesorter-headerDesc"
+        });
+      });
     </script>
   </body>
 </html>
