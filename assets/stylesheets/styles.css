@@ -1,0 +1,436 @@
+* {
+  /* Defines how the width and height of an element are calculated: should they include padding and borders, or not. */
+  /* box-sizing: border-box; Width and height apply to all parts of the element: content, padding and borders */
+  /* box-sizing: content-box; Width and height only apply to the content of the element */
+  box-sizing: border-box;
+}
+
+/* BEG styling for logo on top */
+body {
+  margin: 0;
+  font-family: "Bodoni";
+  color: darkslategray;
+  font-size: 12px;
+  font-weight: lighter;
+  letter-spacing: .25px;
+  line-height: 16px;
+}
+article {
+  margin: 0;
+  font-family: "Bodoni";
+  color: darkslategray;
+  font-size: 12px;
+  font-weight: lighter;
+  letter-spacing: .25px;
+  line-height: 16px;
+}
+
+header a.logo {
+  position: absolute;
+  display: block;
+  width: 500px;
+  height: 90px;
+  background: url(../images/mockups-23.png) no-repeat 0 0;
+  background-size: contain;
+  z-index: 1;
+  top: 25px;
+  left: 25px;
+  bottom: 850px
+}
+header a.logo span {
+  display: none;
+}
+
+header a.logo:hover {
+  opacity: 0.8;
+}
+
+nav {
+  background-color: rgb(86, 107, 46);
+  padding: 65px 40px 45px 500px;
+  font-family: "Bodoni";
+  letter-spacing: 1.5px;
+  font-size: 13px;
+  
+}
+/* END styling for logo on top */
+
+/* BEG styling navigation bar */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0px 0px 0px 180px;
+  font-family: "Bodoni";
+  letter-spacing: 1.5px;
+}
+
+nav ul::after {
+  content: "";
+  display: block;
+  clear: both;
+  font-family: "Bodoni";
+}
+
+nav > ul > li {
+  float: left;
+  font-family: "Bodoni";
+}
+
+nav ul li a {
+  display: inline-flex;
+  color: rgb(255, 244, 222);
+  padding: 10px 12px 10px 12px;
+  text-decoration: none;
+  width: auto;
+  font-family: "Bodoni";
+  letter-spacing: 1.5px;
+}
+
+/* styling hover nav item */
+nav ul li a:hover {
+  background-color: rgb(124, 152, 60);
+  text-decoration: none;
+  color: rgb(255, 244, 222);
+  font-family: "Bodoni";
+}
+
+.active-page {
+  background-color: rgb(124, 152, 60);
+  color: rgb(86, 107, 46);
+  font-family: "Bodoni";
+}
+
+.active-menu-item {
+  color: rgb(124, 152, 60);
+  font-family: "Bodoni";
+}
+
+/* END styling navigation bar */
+
+/********** BEG for dropdown menu in small screen **********/
+.dropdown {
+  position: absolute;
+  display: none;
+  top: 0; /* top right bottom left work with position:absolute, set an absolute position where to put the dropdown menu */
+  right: 0px;
+  font-family: "Bodoni";
+}
+
+.dropbtn {
+  background-color: rgba(0, 102, 102, 0);
+  color: rgb(255, 244, 222);
+  padding: 21px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  line-height: normal; /* do this override/cascade the line-height set in carousel plugin */
+  font-family: "Bodoni";
+}
+
+.dropdown-content {
+  display: none; /* set display to none, so dropdown menu won't show till hover dropdown */
+  position: absolute;
+  right: 0;
+  background-color: rgb(86, 107, 46);
+  min-width: 280px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  font-family: "Bodoni";
+}
+
+.dropdown-content a {
+  color: rgb(255, 244, 222);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  line-height: normal; /* do this override/cascade the line-height set in carousel plugin */
+  font-family: "Bodoni";
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(124, 152, 60);
+  font-family: "Bodoni";
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover {
+  background-color: rgb(124, 152, 60);
+}
+/********** END for dropdown menu in small screen **********/
+
+/* BEG styling hero screen*/
+.home-page {
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  right: 0; /* need to have position set to "fixed" */
+  bottom: 0; /* need to have position set to "fixed" */
+  width: auto;
+  height: auto;
+  background: rgb(255, 244, 222) url(../images/mockups-01.jpg) no-repeat center;
+  background-size: cover;
+  display: flex; /* for hero text */
+  z-index: -1;
+}
+.background{
+  background-color: rgb(255, 244, 222);
+}
+.hero-text {
+  margin: 1em 0px .75em 0px;
+  color: rgb(86, 107, 46);
+  font-family: "Bodoni";
+  font-size: 1.7em;
+  font-weight: bold;
+  background-color: rgb(255, 244, 222);
+  letter-spacing: 2px;
+}
+
+.hero-text-2 {
+  margin: 0px 0px 1.5em 0px;
+  color: rgb(86, 107, 46);
+  font-family: "Bodoni";
+  font-size: 1.2em;
+  font-weight: lighter;
+  background-color: rgb(255, 244, 222);
+  letter-spacing: 1px;
+}
+/* END styling hero screen*/
+
+/* style page banner */
+header.food-page {
+  background: #eee url(../images/food-02.jpg) no-repeat center; /* top center bottom - 1/3 of the image full height */
+  background-size: cover;
+  height: 450px;
+}
+
+header.page-3 {
+  /* add you own header here */
+}
+
+header.page-4 {
+  /* add you own header here */
+}
+
+header.page-5 {
+  /* add you own header here */
+}
+
+header.page-6 {
+  /* add you own header here */
+}
+
+/* BEG styling headings */
+h1 {
+  margin: 1em 0px .75em 0px;
+  color: rgb(86, 107, 46);
+  font-family: "Bodoni";
+  font-size: 1.7em;
+  font-weight: bold;
+  background-color: rgb(255, 244, 222);
+  letter-spacing: 2px;
+}
+
+h2 {
+  margin: 0px 0px 1.5em 0px;
+  color: rgb(86, 107, 46);
+  font-family: "Bodoni";
+  font-size: 1.2em;
+  font-weight: lighter;
+  background-color: rgb(255, 244, 222);
+  letter-spacing: 1px;
+  
+}
+
+h3 {
+  margin: 0px 0px 1.5em 0px;
+  color: rgb(255, 244, 222);
+  font-family: "Bodoni";
+  font-size: 1.1em;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h4 {
+  margin: 25px 0px 10px 0px;
+  color: rgb(86, 107, 46);
+  font-family: "Bodoni";
+  font-size: 18px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+
+/* END styling headings */
+
+/* Styling anchor link (hyperlink) */
+a {
+  color: rgb(124, 152, 60);
+  text-decoration: underline;
+  font-family: "Bodoni";
+  font-weight: lighter;
+}
+
+/* BEG styling images */
+img.size01 {
+  max-width: 300px;
+  padding-bottom: 10px;
+}
+
+img.size02 {
+  max-width: 400px;
+  padding-bottom: 15px;
+}
+
+img.size03 {
+  max-width: 500px;
+  padding-bottom: 20px;
+}
+
+.padding-right {
+  padding-right: 15px;
+}
+
+.padding-left {
+  padding-left: 15px;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+#vegetables {
+  color: seagreen;
+}
+
+#fruits {
+  color: orangered;
+}
+
+#grains {
+  color: saddlebrown;
+}
+/* END styling images */
+
+/* set padding from browser edges for content */
+article > div,
+footer > div {
+  /* padding: top right bottom left */
+  padding: 0px 40px 0px 40px;
+}
+
+@media screen and (max-width: 750px) {
+  /*header {
+    height: 240px;
+  }*/
+  header a.logo {
+    width: 120px;
+    height: 44px;
+  }
+  /*** for carousel area ***/
+  section > div.carousel-area {
+    width: 100%;
+    float: none;
+    margin-bottom: 40px;
+    /* padding: top right bottom left */
+    padding: 0px 40px 30px 40px;
+    border-right: none;
+    border-bottom: 1px solid #555;
+    background-color: rgb(255, 244, 222);
+  }
+  /*** for carousel area ***/
+  article {
+    width: 100%;
+    float: none;
+    margin-bottom: 40px;
+  }
+  article > div {
+    margin: 0px 40px;
+    /* padding: top right bottom left */
+    padding: 0px 0px 30px 0px;
+    border-right: none;
+    border-bottom: 1px solid #555;
+  }
+  aside {
+    width: 100%;
+    float: none;
+  }
+  aside p.to-top {
+    display: block;
+  }
+
+  nav {
+    /* padding: top right bottom left */
+    padding: 60px 0px 0px 20px;
+  }
+  nav > ul {
+    padding-left: 0px;
+    padding-right: 20px;
+  }
+  nav > ul > li > a {
+    /* padding: top right bottom left */
+    padding: 8px 12px 10px 12px;
+  }
+  .flex-container > div {
+    width: 25%;
+  }
+  .flex-container > span > h2 {
+    text-align: center;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  video {
+    display: flex;
+  }
+}
+
+/********** BEG for dropdown menu in small screen **********/
+@media screen and (max-width: 500px) {
+  nav > ul {
+    display: none;
+  }
+  header.food-page {
+    background: #eee url(../images/food-02.jpg) no-repeat center; /* top center bottom - 1/3 of the image full height */
+    background-size: cover;
+    height: 270px;
+  }
+  header.page-3 {
+    /* add you own header here */
+  }
+  header.page-4 {
+    /* add you own header here */
+  }
+  header.page-5 {
+    /* add you own header here */
+  }
+  header.page-6 {
+    /* add you own header here */
+  }
+  .dropdown {
+    display: block;
+  }
+  .flex-container > div {
+    width: 50%;
+  }
+  aside > div > div.scrolling {
+    height: 300px;
+
+  }
+}
+/********** END for dropdown menu in small screen **********/
+@font-face {
+  font-family: Bodoni;
+  src: url("../fonts/LibreBodoni-VariableFont_wght.ttf") format("truetype"); 
+}
+@font-face {
+  font-family: Bodoni-italic;
+  src: url("../fonts/LibreBodoni-Italic-VariableFont_wght.ttf") format("truetype");
+}

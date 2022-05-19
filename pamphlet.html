@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Carousel Bootstrap</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
+        <style>
+          body{
+            background-color: rgb(255, 244, 222);
+          }
+          section>div.carousel-area {
+            width: auto;
+            height: auto;
+            padding: 0px 40px 0px 40px;
+            background-color: rgb(255, 244, 222);
+          }
+          div.scrolling{
+            width: auto;
+            height: 200px;
+            padding: 20px 50px 20px 50px;
+            border: 1px solid rgb(86, 107, 46);
+            overflow: auto;
+          }
+        </style>
+      </head>
+      
+      <body>
+        <header>
+          <a class="logo" href="index.html"><span>The Book of Type</span></a>
+          <nav>
+            <ul>
+              <li>
+                <a href="index.html">HOME</a>
+              </li>
+              <li class="active-page">
+                <a href="pamphlet.html">PAMPHLET</a>
+              </li>
+              <li>
+                <a href="pages.html">PAGES</a>
+              </li>
+              <li>
+                <a href="history.html">HISTORY</a>
+              </li>
+              <li>
+                <a href="table.html">TABLE</a>
+              </li>
+              <li>
+                <a href="more.html">MORE</a>
+              </li>
+            </ul>
+            <div class="dropdown">
+              <button class="dropbtn">MENU</button>
+              <div class="dropdown-content">
+                <a href="index.html">HOME</a>
+                <a href="pamphlet.html">PAMPHLET</a>
+                <a href="pages.html">PAGES</a>
+                <a href="history.html">HISTORY</a>
+                <a href="table.html">TABLE</a>
+                <a href="more.html">MORE</a>
+              </div>
+            </div>
+          </nav>
+        </header>
+        
+        <section>
+          <div class="carousel-area">
+            <h1 style="padding: 10px 10px 10px 10px;">THE PAMPHLET</h1>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+              </ol>
+      
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="./assets/images/pamplet-mock-up-1.jpg" alt="Salt" style="width:100%;" />
+                  <div class="carousel-caption">
+                    <h3>FRONT SIDE</h3>
+                  </div>
+                </div>
+      
+                <div class="item">
+                  <img src="./assets/images/pamphlet-mock-up-2.jpg" alt="Sugar" style="width:100%;" />
+                  <div class="carousel-caption">
+                    <h3>BACK SIDE</h3>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./assets/images/pamplet-mock-up-3.jpg" alt="Sugar" style="width:100%;" />
+                  <div class="carousel-caption">
+                    <h3>FONT & COVER</h3>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Left and right controls -->
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <article>
+          <h3>Utensil spotlight</h3>
+          <div class="scrolling">
+            <span>
+              <h2 style="padding-top: 20px;">BACKGROUND:</h2>
+              The anatomy of type refers to standard elements that
+              exist in typefaces. The variation of these elements is what gives
+              a typeface its legibility, character, cultural and historical context.
+            </span>
+            <!-- the image is wider that 500px, so overflow-x fired up.  if remove the image, overflow-x inactivated -->
+            <p>
+              <h2 style="padding-top: 20px;">OBJECTIVE:</h2>
+              The Objective of this pamplet was to Introduce type terminology via an 
+              infographic with a focus on the target audience: individuals ages 10-85 who are 
+              interested in graphic design, typogrpahy, typesetting, font design, or art. 
+              To dentify the structural aspects of type and label the different kinds of 
+              strokes, junctions & negative spaces used to create letterforms with the goal of
+              educating the reader. To Identify a variety of differently shaped terminals 
+              and serifs while increasing awareness of letterforms and glyphs. To create an 
+              arrangment with a focus on hierachy, negative space, focal point, color, and impact.
+            </p>
+            <p>
+              <h2 style="padding-top: 20px;">DESIGN PROCESS:</h2>
+              I chose to arrange the letterforms by characteristics rather than in anarrangement 
+              of words or in alphabetical order in an effort to generate a new perspective for the
+              reader. I think that usually the actual characteristics of letterforms themselves are 
+              ignored as people are focused on the message they are conveying, however the actual 
+              letters themselves (depending on the arrangement) can be art in itself. I wanted to 
+              highlight similar characteristics between letters that are not often paired together 
+              while also showcasing the unique aspects of the Bodoni typeface. I was inspired by 
+              coffee table books and wanted this infographic to act as a guide that would be visually 
+              intriguing enough to place as a decoration on a coffee table or in a home. 
+            </p>
+            <p>
+              <h2 style="padding-top: 20px;">DESIGN SOLUTION:</h2>
+              In order to draw the reader's attention to the characteristics of the typeface and
+              the anatomy of type, I arranged the letters by similar shapes, forms and strokes. I utilized a
+              simple color pallet in order to evoke the coffee-table essence while still appearing elegant and
+              interesting. I used color blocking and hairlines to point out the individual characteristics of the
+              type anatomy. I focused heavily on negative space and spacing in general on this project as well
+              as flow, form and lines.
+            </p>
+            <span>
+              <h2 style="padding-top: 20px;">SOFTWARE USED:</h2>
+              <p>Adobe Illustrator | Adobe InDesign | Adobe Photoshop</p>
+            </span>
+          </div>
+        </article>
+      
+        <!-- jquery.min.js should be loaded before bootstrap.min.js because bootstrap's JavaScript requires jQueary -->
+        <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/JavaScript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      </body>
+</html>
