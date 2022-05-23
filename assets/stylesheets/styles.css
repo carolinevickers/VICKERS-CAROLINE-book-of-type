@@ -8,7 +8,7 @@
 /* BEG styling for logo on top */
 body {
   margin: 0;
-  font-family: "Bodoni";
+  font-family: "Barlow";
   color: darkslategray;
   font-size: 12px;
   font-weight: lighter;
@@ -17,11 +17,11 @@ body {
 }
 article {
   margin: 0;
-  font-family: "Bodoni";
-  color: darkslategray;
+  font-family: "Barlow";
+  color: rgb(86, 107, 46);
   font-size: 12px;
   font-weight: lighter;
-  letter-spacing: .25px;
+  letter-spacing: .75px;
   line-height: 16px;
 }
 
@@ -33,7 +33,7 @@ header a.logo {
   background: url(../images/mockups-23.png) no-repeat 0 0;
   background-size: contain;
   z-index: 1;
-  top: 25px;
+  top: 38px;
   left: 25px;
   bottom: 850px
 }
@@ -47,7 +47,7 @@ header a.logo:hover {
 
 nav {
   background-color: rgb(86, 107, 46);
-  padding: 65px 40px 45px 500px;
+  padding: 65px 40px 45px 450px;
   font-family: "Bodoni";
   letter-spacing: 1.5px;
   font-size: 13px;
@@ -58,8 +58,8 @@ nav {
 /* BEG styling navigation bar */
 nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0px 0px 0px 180px;
+  margin-right: 10px;
+  padding: 0px 0px 0px 200px;
   font-family: "Bodoni";
   letter-spacing: 1.5px;
 }
@@ -79,7 +79,8 @@ nav > ul > li {
 nav ul li a {
   display: inline-flex;
   color: rgb(255, 244, 222);
-  padding: 10px 12px 10px 12px;
+  padding: 10px 10px 10px 10px;
+  border: .25px solid rgb(255, 244, 222);
   text-decoration: none;
   width: auto;
   font-family: "Bodoni";
@@ -96,12 +97,13 @@ nav ul li a:hover {
 
 .active-page {
   background-color: rgb(124, 152, 60);
-  color: rgb(86, 107, 46);
+  color: rgb(255, 244, 222);
   font-family: "Bodoni";
 }
 
 .active-menu-item {
-  color: rgb(124, 152, 60);
+  color: rgb(255, 244, 222);
+  background-color:  rgb(124, 152, 60);
   font-family: "Bodoni";
 }
 
@@ -235,7 +237,7 @@ h1 {
 }
 
 h2 {
-  margin: 0px 0px 1.5em 0px;
+  margin: 0px 0px 8px 0px;
   color: rgb(86, 107, 46);
   font-family: "Bodoni";
   font-size: 1.2em;
@@ -270,14 +272,20 @@ h4 {
 /* Styling anchor link (hyperlink) */
 a {
   color: rgb(124, 152, 60);
-  text-decoration: underline;
-  font-family: "Bodoni";
+  font-family: "Barlow";
   font-weight: lighter;
+  padding-left: 10px;
+  text-decoration: none;
+}
+li {
+  color: rgb(86, 107, 46);
+  padding: 0 0 0 5px;
+  margin-left: 10px;
 }
 
 /* BEG styling images */
 img.size01 {
-  max-width: 300px;
+  max-width: 325px;
   padding-bottom: 10px;
 }
 
@@ -433,4 +441,8 @@ footer > div {
 @font-face {
   font-family: Bodoni-italic;
   src: url("../fonts/LibreBodoni-Italic-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: Barlow ;
+  src: url("../fonts/BarlowSemiCondensed-Light.ttf") format("truetype");
 }

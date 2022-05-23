@@ -33,7 +33,7 @@ body.lb-disable-scrolling {
   border: 2px solid rgb(86, 107, 46);
 }
 .lightbox a img {
-  border: none;
+  border: 0
 }
 .lb-outerContainer {
   position: relative;
