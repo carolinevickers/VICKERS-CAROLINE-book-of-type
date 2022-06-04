@@ -59,7 +59,7 @@ nav {
 nav ul {
   list-style: none;
   margin-right: 10px;
-  padding: 0px 0px 0px 200px;
+  padding: 0px 0px 0px 192px;
   font-family: "Bodoni";
   letter-spacing: 1.5px;
 }
@@ -74,6 +74,7 @@ nav ul::after {
 nav > ul > li {
   float: left;
   font-family: "Bodoni";
+  padding-left:0px
 }
 
 nav ul li a {
